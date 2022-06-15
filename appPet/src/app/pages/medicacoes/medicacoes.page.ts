@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavController, ToastController } from '@ionic/angular';
 import { MedicacaoList, MedicacaoService } from 'src/services/medicacao/medicacao.service';
 
@@ -10,7 +11,7 @@ import { MedicacaoList, MedicacaoService } from 'src/services/medicacao/medicaca
 export class MedicacoesPage {
   medicacoes: MedicacaoList[];
 
-  constructor(public nav: NavController, private medicacaoService: MedicacaoService, private toast: ToastController) { }
+  constructor(private router: Router, public nav: NavController, private medicacaoService: MedicacaoService, private toast: ToastController) { }
 
   ionViewDidEnter() {
     this.medicacaoService.getAll()
@@ -23,9 +24,9 @@ export class MedicacoesPage {
     this.nav.navigateForward('editar-medicacoes');
   }
 
-  // editarMedicacao(item: MedicacaoList) {
-  //   this.nav.push('editar-medicacoes', { key: item.key, medicacao: item.medicacao });
-  // }
+  editarMedicacao(item: MedicacaoList) {
+    this.router.navigate(['editar-medicacoes'],{ state : {key: item.key, medicacao: item.medicacao}})
+  }
 
   removerMedicacao(item: MedicacaoList) {
     this.medicacaoService.remove(item.key)

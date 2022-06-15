@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavController, NavParams, ToastController } from '@ionic/angular';
 import { Medicacao, MedicacaoService } from 'src/services/medicacao/medicacao.service';
 
@@ -12,10 +13,10 @@ export class EditarMedicacoesPage {
   model: Medicacao;
   key: string;
 
-  constructor(public nav: NavController, public navParams: NavParams, private medicacaoService: MedicacaoService, private toast: ToastController) {
-    if (this.navParams.data.medicacao && this.navParams.data.key) {
-      this.model = this.navParams.data.medicacao;
-      this.key =  this.navParams.data.key;
+  constructor(public router: Router, public nav: NavController, public navParams: NavParams, private medicacaoService: MedicacaoService, private toast: ToastController) {
+    if (router.getCurrentNavigation().extras.state) {
+      this.model = this.router.getCurrentNavigation().extras.state.medicacao
+      this.key = this.router.getCurrentNavigation().extras.state.key
     } else {
       this.model = new Medicacao();
     }

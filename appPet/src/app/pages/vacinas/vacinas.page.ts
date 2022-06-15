@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavController, ToastController } from '@ionic/angular';
 import { VacinaList, VacinaService } from 'src/services/vacina/vacina.service';
 
@@ -10,7 +11,7 @@ import { VacinaList, VacinaService } from 'src/services/vacina/vacina.service';
 export class VacinasPage {
   vacinas: VacinaList[];
 
-  constructor(public nav: NavController, private vacinaService: VacinaService, private toast: ToastController) { }
+  constructor(private router: Router, public nav: NavController, private vacinaService: VacinaService, private toast: ToastController) { }
 
   ionViewDidEnter() {
     this.vacinaService.getAll()
@@ -23,9 +24,9 @@ export class VacinasPage {
     this.nav.navigateForward('editar-vacinas');
   }
 
-  // editarVacina(item: VacinaList) {
-  //   this.nav.push('editar-vacinas', { key: item.key, vacina: item.vacina });
-  // }
+  editarVacina(item: VacinaList) {
+    this.router.navigate(['editar-vacinas'],{ state : {key: item.key, vacina: item.vacina}})
+  }
 
   removerVacina(item: VacinaList) {
     this.vacinaService.remove(item.key)

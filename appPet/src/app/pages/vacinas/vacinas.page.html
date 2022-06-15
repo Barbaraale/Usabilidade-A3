@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <ion-title>vacinas</ion-title>
+      <ion-button (click)="changePage('')">Voltar</ion-button>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let item of vacinas">
+      <ion-card-header>
+        <h1>Vacina: {{ item.vacina.nome }}</h1>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Data: {{ item.vacina.data }}</p>
+      </ion-card-content>
+      <ion-card-content>
+        <p>Revacinar em: {{ item.vacina.revacinar }}</p>
+      </ion-card-content>
+      <ion-row>
+          <ion-button (click)="editarVacina(item)">Editar</ion-button>
+          <ion-button (click)="removerVacina(item)">Excluir</ion-button>
+      </ion-row>
+    </ion-card>
+  </ion-list>
+  <ion-row>
+    <ion-button (click)="addVacina()">Adicionar</ion-button>
+  </ion-row>
+</ion-content>

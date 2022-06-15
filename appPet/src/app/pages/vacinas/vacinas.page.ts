@@ -24,7 +24,7 @@ export class VacinasPage {
   }
 
   // editarVacina(item: VacinaList) {
-  //   this.navCtrl.push('editar-vacinas', { key: item.key, contact: item.vacina });
+  //   this.nav.push('editar-vacinas', { key: item.key, vacina: item.vacina });
   // }
 
   removerVacina(item: VacinaList) {

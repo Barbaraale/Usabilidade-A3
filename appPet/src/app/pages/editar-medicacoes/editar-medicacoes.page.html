@@ -5,5 +5,20 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item>
+      <ion-label>Medicação:</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="model.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Data:</ion-label>
+      <ion-input type="text" name="data" [(ngModel)]="model.data"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Data da próxima medicação:</ion-label>
+      <ion-input type="text" name="proxima" [(ngModel)]="model.proxima"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="save()">Salvar</ion-button>
+  <ion-button (click)="cancel()">Cancelar</ion-button>
 </ion-content>

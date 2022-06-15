@@ -14,8 +14,8 @@ export class EditarVacinasPage {
   key: string;
 
   constructor(public nav: NavController, public navParams: NavParams, private vacinaService: VacinaService, private toast: ToastController) {
-    if (this.navParams.data.contact && this.navParams.data.key) {
-      this.model = this.navParams.data.contact;
+    if (this.navParams.data.vacina && this.navParams.data.key) {
+      this.model = this.navParams.data.vacina;
       this.key =  this.navParams.data.key;
     } else {
       this.model = new Vacina();

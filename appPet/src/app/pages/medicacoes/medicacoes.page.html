@@ -11,13 +11,13 @@
   <ion-list>
     <ion-card *ngFor="let item of medicacoes">
       <ion-card-header>
-        <h1>Medicação: {{ item.medicacao.nome }}</h1>
+        <h1>Medicação: {{ item.medicacao.nomeMedicacao }}</h1>
       </ion-card-header>
       <ion-card-content>
-        <p>Data: {{ item.medicacao.data }}</p>
+        <p>Data: {{ item.medicacao.dataMedicacao }}</p>
       </ion-card-content>
       <ion-card-content>
-        <p>Próxima: {{ item.medicacao.proximaData }}</p>
+        <p>Próxima: {{ item.medicacao.proximaMedicacao }}</p>
       </ion-card-content>
       <ion-row>
           <ion-button (click)="editarMedicacao(item)">Editar</ion-button>

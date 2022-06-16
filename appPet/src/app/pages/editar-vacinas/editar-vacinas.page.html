@@ -1,6 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>editar-vacinas</ion-title>
+    <div class="div-header-img">
+      <ion-img  class="logo" src="assets/imgs/infoppet.png"></ion-img>
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -26,6 +28,8 @@
       <ion-input type="date" name="proxima" [(ngModel)]="model.proxima"></ion-input>
     </ion-item>
   </ion-list>
-  <ion-button (click)="save()">Salvar</ion-button>
-  <ion-button (click)="cancel()">Cancelar</ion-button>
+  <ion-row class="info-row-btn">
+    <button class="info-btn" (click)="save()">Salvar</button>
+    <button class="info-btn" (click)="cancel()">Cancelar</button>
+  </ion-row>
 </ion-content>

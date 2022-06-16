@@ -1,31 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-row>
-      <ion-title>vacinas</ion-title>
-      <ion-button (click)="changePage('')">Voltar</ion-button>
+  <ion-toolbar class="toolbar">
+    <ion-row class="header">
+      <button class="header-btn" (click)="changePage('')"><ion-icon name="arrow-back"></ion-icon></button>
+      <ion-img  class="logo" src="assets/imgs/infoppet.png"></ion-img>
+      <button class="header-btn" (click)="addVacina()"><ion-icon name="add"></ion-icon></button>
     </ion-row>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-card *ngFor="let item of vacinas">
-      <ion-card-content>
+  <ion-list class="list">
+    <ion-card class="card" *ngFor="let item of vacinas">
+      <ion-card-content class="card-content">
         <h1>{{ item.vacina.tipo }}: {{ item.vacina.nome }}</h1>
       </ion-card-content>
-      <ion-card-content>
+      <ion-card-content class="card-content">
         <h2>Data: {{ item.vacina.data | date: 'dd-MM-yyyy'}}</h2>
       </ion-card-content>
-      <ion-card-content>
+      <ion-card-content class="card-content">
         <h2>Próxima: {{ item.vacina.proxima | date: 'dd-MM-yyyy' }}</h2>
       </ion-card-content>
-      <ion-row>
-          <ion-button (click)="editarVacina(item)">Editar</ion-button>
-          <ion-button (click)="removerVacina(item)">Excluir</ion-button>
+      <ion-row class="row-btns">
+          <button class="content-btn" (click)="editarVacina(item)">Editar</button>
+          <button class="content-btn" (click)="removerVacina(item)">Excluir</button>
       </ion-row>
     </ion-card>
   </ion-list>
-  <ion-row>
-    <ion-button (click)="addVacina()">Adicionar</ion-button>
-  </ion-row>
 </ion-content>

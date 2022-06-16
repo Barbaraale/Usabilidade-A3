@@ -1,14 +1,7 @@
-<ion-header >
-  <ion-toolbar>
-    <ion-title>InfoPet</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <ion-item>
-    <ion-img src="assets/imgs/img1.png"></ion-img>
-  </ion-item>
-  <ion-item>
-    <ion-button (click)="changePage('vacinas')">Informações</ion-button>
-  </ion-item>
+<ion-content class="container">
+  <ion-row class="container">
+    <ion-img class="logoHome" src="assets/imgs/img1.png"></ion-img>
+      <p class="slogan">Administre as medicações e vacinas do seu Pet!</p>
+      <button class="homeButton" (click)="changePage('vacinas')">Meu Pet</button>
+  </ion-row>
 </ion-content>

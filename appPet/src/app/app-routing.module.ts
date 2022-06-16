@@ -19,18 +19,18 @@ const routes: Routes = [
     path: 'editar-vacinas',
     loadChildren: () => import('./pages/editar-vacinas/editar-vacinas.module').then( m => m.EditarVacinasPageModule)
   },
-  {
-    path: 'tabs',
-    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
-  },
-  {
-    path: 'medicacoes',
-    loadChildren: () => import('./pages/medicacoes/medicacoes.module').then( m => m.MedicacoesPageModule)
-  },
-  {
-    path: 'editar-medicacoes',
-    loadChildren: () => import('./pages/editar-medicacoes/editar-medicacoes.module').then( m => m.EditarMedicacoesPageModule)
-  },
+  // {
+  //   path: 'tabs',
+  //   loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
+  // },
+  // {
+  //   path: 'medicacoes',
+  //   loadChildren: () => import('./pages/medicacoes/medicacoes.module').then( m => m.MedicacoesPageModule)
+  // },
+  // {
+  //   path: 'editar-medicacoes',
+  //   loadChildren: () => import('./pages/editar-medicacoes/editar-medicacoes.module').then( m => m.EditarMedicacoesPageModule)
+  // },
 ];
 
 @NgModule({

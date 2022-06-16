@@ -27,7 +27,7 @@ export class EditarVacinasPage {
     this.saveVacina()
       .then(async () => {
         (await this.toast.create({ message: 'Vacina salva.', duration: 3000, position: 'bottom' })).present();
-        this.nav.navigateForward('/tabs/vacinas');
+        this.nav.navigateForward('vacinas');
       })
       .catch(async () => {
         (await this.toast.create({ message: 'Erro ao salvar a vacina.', duration: 3000, position: 'bottom' })).present();
@@ -43,6 +43,6 @@ export class EditarVacinasPage {
   }
 
   cancel() {
-    this.nav.navigateForward('/tabs/vacinas');
+    this.nav.navigateForward('vacinas');
   }
 }

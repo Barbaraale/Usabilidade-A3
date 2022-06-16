@@ -7,16 +7,23 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-label>Vacina:</ion-label>
+      <ion-label>Tipo:</ion-label>
+      <ion-select placeholder="Selecione" [(ngModel)]="model.escolha">
+        <ion-select-option value="Vacina">Vacina</ion-select-option>
+        <ion-select-option value="Medicação">Medicação</ion-select-option>
+      </ion-select>
+    </ion-item>  
+    <ion-item>
+      <ion-label>Nome:</ion-label>
       <ion-input type="text" name="nome" [(ngModel)]="model.nome"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Data:</ion-label>
-      <ion-input type="text" name="data" [(ngModel)]="model.data"></ion-input>
+      <ion-input type="date" name="data" [(ngModel)]="model.data"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Revacinar:</ion-label>
-      <ion-input type="text" name="revacinar" [(ngModel)]="model.revacinar"></ion-input>
+      <ion-label>Próxima:</ion-label>
+      <ion-input type="date" name="revacinar" [(ngModel)]="model.revacinar"></ion-input>
     </ion-item>
   </ion-list>
   <ion-button (click)="save()">Salvar</ion-button>

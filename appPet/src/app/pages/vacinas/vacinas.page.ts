@@ -31,7 +31,6 @@ export class VacinasPage {
   removerVacina(item: VacinaList) {
     this.vacinaService.remove(item.key)
       .then(async () => {
-        // Removendo do array de items
         var index = this.vacinas.indexOf(item);
         this.vacinas.splice(index, 1);
         (await this.toast.create({ message: 'Vacina removida.', duration: 3000, position: 'bottom' })).present();

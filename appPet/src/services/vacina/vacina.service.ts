@@ -12,7 +12,6 @@ export class VacinaService {
     this.init();
   }
 
-  //criando o storage
   async init() {
     const s = await this.armazenamento.create();
     this.storage = s;
@@ -54,8 +53,9 @@ export class VacinaService {
 
 export class Vacina {
   nome: string;
-  data: string;
-  revacinar: string;
+  data: Date;
+  revacinar: Date;
+  escolha: string;
 }
 
 export class VacinaList {

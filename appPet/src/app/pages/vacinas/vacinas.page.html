@@ -10,14 +10,17 @@
 <ion-content>
   <ion-list>
     <ion-card *ngFor="let item of vacinas">
-      <ion-card-header>
-        <h1>Vacina: {{ item.vacina.nome }}</h1>
-      </ion-card-header>
       <ion-card-content>
-        <p>Data: {{ item.vacina.data }}</p>
+        <h2>Tipo: {{ item.vacina.escolha }}</h2>
       </ion-card-content>
       <ion-card-content>
-        <p>Revacinar em: {{ item.vacina.revacinar }}</p>
+        <h1>Nome: {{ item.vacina.nome }}</h1>
+      </ion-card-content>
+      <ion-card-content>
+        <h2>Data: {{ item.vacina.data }}</h2>
+      </ion-card-content>
+      <ion-card-content>
+        <h2>Próxima: {{ item.vacina.revacinar }}</h2>
       </ion-card-content>
       <ion-row>
           <ion-button (click)="editarVacina(item)">Editar</ion-button>

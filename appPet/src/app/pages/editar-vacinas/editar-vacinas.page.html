@@ -8,7 +8,7 @@
   <ion-list>
     <ion-item>
       <ion-label>Tipo:</ion-label>
-      <ion-select placeholder="Selecione" [(ngModel)]="model.escolha">
+      <ion-select placeholder="Selecione" [(ngModel)]="model.tipo">
         <ion-select-option value="Vacina">Vacina</ion-select-option>
         <ion-select-option value="Medicação">Medicação</ion-select-option>
       </ion-select>
@@ -23,7 +23,7 @@
     </ion-item>
     <ion-item>
       <ion-label>Próxima:</ion-label>
-      <ion-input type="date" name="revacinar" [(ngModel)]="model.revacinar"></ion-input>
+      <ion-input type="date" name="proxima" [(ngModel)]="model.proxima"></ion-input>
     </ion-item>
   </ion-list>
   <ion-button (click)="save()">Salvar</ion-button>

@@ -54,8 +54,8 @@ export class VacinaService {
 export class Vacina {
   nome: string;
   data: Date;
-  revacinar: Date;
-  escolha: string;
+  proxima: Date;
+  tipo: string;
 }
 
 export class VacinaList {

@@ -33,7 +33,7 @@ export class VacinasPage {
       .then(async () => {
         var index = this.vacinas.indexOf(item);
         this.vacinas.splice(index, 1);
-        (await this.toast.create({ message: 'Vacina removida.', duration: 3000, position: 'bottom' })).present();
+        (await this.toast.create({ message: 'Anotação removida.', duration: 2000, position: 'bottom' })).present();
       })
   }
 

@@ -26,11 +26,11 @@ export class EditarVacinasPage {
   save() {
     this.saveVacina()
       .then(async () => {
-        (await this.toast.create({ message: 'Vacina salva.', duration: 3000, position: 'bottom' })).present();
+        (await this.toast.create({ message: 'Anotação salva.', duration: 2000, position: 'bottom' })).present();
         this.nav.navigateForward('vacinas');
       })
       .catch(async () => {
-        (await this.toast.create({ message: 'Erro ao salvar a vacina.', duration: 3000, position: 'bottom' })).present();
+        (await this.toast.create({ message: 'Erro ao salvar a anotação.', duration: 2000, position: 'bottom' })).present();
       });
   }
 

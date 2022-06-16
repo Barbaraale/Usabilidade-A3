@@ -17,10 +17,10 @@
         <h1>Nome: {{ item.vacina.nome }}</h1>
       </ion-card-content>
       <ion-card-content>
-        <h2>Data: {{ item.vacina.data }}</h2>
+        <h2>Data: {{ item.vacina.data | date: 'dd-MM-yyyy'}}</h2>
       </ion-card-content>
       <ion-card-content>
-        <h2>Próxima: {{ item.vacina.revacinar }}</h2>
+        <h2>Próxima: {{ item.vacina.revacinar | date: 'dd-MM-yyyy' }}</h2>
       </ion-card-content>
       <ion-row>
           <ion-button (click)="editarVacina(item)">Editar</ion-button>
